@@ -22,11 +22,19 @@ const tutorials = [
 //   });
 // }
 
+// const titleCased = () => {
+//   return tutorials.map(tutorial => {
+//     tutorial = tutorial.split(' ');
+//     return tutorial.map(word => {
+//       return (word.charAt(0).toUpperCase() + word.slice(1));
+//     }).join(' ');
+//   });
+// }
+
 const titleCased = () => {
   return tutorials.map(tutorial => {
-    tutorial = tutorial.split(' ');
-    return tutorial.map(word => {
-      return (word.charAt(0).toUpperCase() + word.slice(1));
+    return tutorial.split(' ').map(word => {
+      return word.replace(word[0], word[0].toUpperCase());
     }).join(' ');
   });
 }
